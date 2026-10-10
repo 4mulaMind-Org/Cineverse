@@ -1,83 +1,113 @@
-# 🎬 Cineverse — A Minimalist Movie Booking Experience
+<div align="center">
 
-Cineverse is a premium, modern, and highly intuitive movie booking web interface built to break away from cluttered traditional entertainment platforms. The project focuses on visual hierarchy, smooth transitions, and a clean user flow from film exploration to checkout.
+# 🎬 Cineverse
 
-https://github.com/4mulaMind-Org/Cineverse
+### Book your show. Skip the queue. Feel the cinema.
+
+A full-stack movie ticket booking platform with an editorial-magazine frontend and a battle-tested Spring Boot backend.
+
+[![Spring Boot](https://img.shields.io/badge/Spring%20Boot-4.1.1-6DB33F?logo=springboot&logoColor=white)](https://spring.io/projects/spring-boot)
+[![Java](https://img.shields.io/badge/Java-27-ED8B00?logo=openjdk&logoColor=white)](https://jdk.java.net/27/)
+[![MySQL](https://img.shields.io/badge/MySQL-9.7-4479A1?logo=mysql&logoColor=white)](https://www.mysql.com/)
+[![Hibernate](https://img.shields.io/badge/Hibernate-7.4.5-59666C?logo=hibernate&logoColor=white)](https://hibernate.org/)
+[![HTML5](https://img.shields.io/badge/HTML5-E34F26?logo=html5&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/HTML)
+[![License](https://img.shields.io/badge/License-MIT-22C55E)](LICENSE)
+
+[Live Demo](http://localhost:8082/cineverse.html) · [Report Bug](https://github.com/4mulaMind-Org/Cineverse/issues) · [Request Feature](https://github.com/4mulaMind-Org/Cineverse/issues)
+
+</div>
+
+---
+
+## 📖 Overview
+
+**Cineverse** is a modern cinema booking experience — no dark themes, no generic purple gradients. Inspired by the editorial layouts of A24 and the Criterion Collection, it pairs a warm, magazine-style interface with a production-grade REST API.
+
+Select a film, pick your show, tap your seats, confirm. Done in under 20 seconds.
+
+<div align="center">
+
+> **Status:** Active development · **Version:** 1.0.0 · **Last updated:** October 2026
+
+</div>
+
 ---
 
 ## ✨ Features
 
-- **Minimalist Hero Section:** A clean landing page layout featuring global coordinates (Mumbai, IN), active running film counts, and a distraction-free search query bar.
-- **Dynamic Movie Carousel:** Card-based horizontal browsing system displaying crisp posters, curated IMDB ratings, precise genres, and exact runtimes.
-- **Intuitive Booking Modal:** An inline overlay engine handling live showtime selection across multiple theaters (PVR, Inox, Cinepolis) along with real-time pricing updates.
-- **Interactive Seating Chart:** A clean layout grid mimicking real-world theater seating configurations with visual indicators for Available, Selected, and Booked states.
-- **Polished Success Screen:** A clutter-free booking confirmation interface engineered to maximize user satisfaction post-transaction.
+### 🎨 Frontend — The Interface
+
+- **Editorial design language** — Playfair Display serif + Inter sans, warm cream palette, film grain texture
+- **Ticket-stub cards** — perforated edges, dashed dividers, Netflix-style film numbering
+- **Curtain animation** — the booking modal opens like a theater curtain
+- **Visual seat map** — real aisle gaps, hover glow, live total calculation
+- **Live marquee** — infinite scrolling headline bar
+- **Search & filter** — search movies by title, genre, or language
+- **Demo mode** — works offline with mock data; switch to live backend with one click
+- **Toast notifications** — slide-in feedback for every action
+- **Fully responsive** — mobile, tablet, desktop
+- **Zero dependencies** — a single HTML file, no npm, no build step
+
+### ⚙️ Backend — The Engine
+
+- **REST API** covering movies, theaters, shows, seats, bookings, and payments
+- **Layered architecture** — Controller → Service → Repository → Entity
+- **JPA/Hibernate** with MySQL persistence and auto-schema updates
+- **DTO mapping** — clean separation between database and API
+- **Bean Validation** — `@Valid`, `@NotNull` on every incoming request
+- **Global exception handling** — custom `ResourceNotFoundException`
+- **Relationship cascading** — Booking → ShowSeat → Payment
+- **Lombok** — zero boilerplate for getters, setters, constructors
 
 ---
 
 ## 🛠️ Tech Stack
 
-- **Frontend:** HTML5, Semantic Markup
-- **Styling:** CSS3 (Custom Variables, Flexbox, CSS Grid for the seating chart)
-- **Scripting:** Vanilla JavaScript (DOM Manipulation, state management for seat selection & modal overlays)
-- **Environment:** Developed and tested using IntelliJ IDEA / WebStorm local server environment
+<table>
+<tr>
+<td valign="top" width="50%">
+
+**Backend**
+- Java 27
+- Spring Boot 4.1.1
+- Spring Data JPA
+- Hibernate 7.4.5
+- MySQL 9.7
+- Jakarta Bean Validation 3.1
+- Lombok 1.18.48
+- Maven
+
+</td>
+<td valign="top" width="50%">
+
+**Frontend**
+- Vanilla HTML5
+- Modern CSS3 (Grid, Flexbox, CSS vars)
+- ES2022 JavaScript
+- Google Fonts
+  - Playfair Display
+  - Inter
+  - JetBrains Mono
+- Zero build tools
+
+</td>
+</tr>
+</table>
 
 ---
 
-## 📂 Project Structure
+## 🚀 Quick Start
 
-```text
-Cineverse/
-│
-├── index.html          # Main landing page & modal structure
-├── css/
-│   └── styles.css      # Core styles, variables, typography, and layout rules
-├── js/
-│   └── app.js          # Interactive booking, modal control, and seat mapping
-└── assets/             # Movie posters, icons, and logo graphics
-```
+### Prerequisites
 
----
+| Tool | Version | Check |
+|---|---|---|
+| JDK | 21 or 27 | `java -version` |
+| Maven | 3.9+ | `mvn -version` |
+| MySQL | 8.0+ | `mysql --version` |
 
-## 🚀 Getting Started
+### 1. Clone
 
-To run this project locally, follow these simple steps:
-
-1. **Clone the repository:**
-   ```bash
-   git clone https://github.com
-   ```
-
-2. **Navigate to the project directory:**
-   ```bash
-   cd Cineverse
-   ```
-
-3. **Open the project:**
-   - Simply open `index.html` in your favorite browser.
-   - Alternatively, serve it via a local environment like **Live Server** (VS Code) or the built-in preview tool in **IntelliJ IDEA / WebStorm**.
-
----
-
-## 📸 UI Walkthrough
-
-1. **Landing Page:** Minimal interface focused entirely on discovering films worth your time.
-2. **Carousel View:** Horizontally scrollable list of trending movies with instant booking triggers.
-3. **Seat Selection:** Responsive layout grid allowing users to seamlessly pick their favorite view.
-4. **Success Screen:** Minimalist ticket generation displaying final seat status and total cost.
-
----
-
-## 🤝 Contributing
-
-Contributions, issues, and feature requests are welcome! Feel free to check the [issues page](https://github.com).
-
----
-
-## 📄 License
-
-This project is open-source and available under the [MIT License](LICENSE).
-
----
-
-Managed with 💻 by **[4mulaMind-Org](https://github.com)**
+```bash
+git clone https://github.com/4mulaMind-Org/Cineverse.git
+cd Cineverse
