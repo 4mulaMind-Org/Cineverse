@@ -2,8 +2,7 @@
 
 Cineverse is a premium, modern, and highly intuitive movie booking web interface built to break away from cluttered traditional entertainment platforms. The project focuses on visual hierarchy, smooth transitions, and a clean user flow from film exploration to checkout.
 
-![Design Preview](https://placeholder.com) *(Note: Replace this with an actual screenshot or GIF once hosted)*
-
+https://github.com/4mulaMind-Org/Cineverse
 ---
 
 ## ✨ Features
